@@ -11,13 +11,18 @@
 |
 */
 
+Route::get('/', function () {
+    return view('Welcome');
+});
 
-Route::get('/', function()){
-    $tanggal = date("d-m-y H:i:s", time());
-    &nama = "Stanislaus Sunday";
-    return view('welcome')->with ('tanggal', $tanggal)->with('nama', $nama);
-};
+Route::get('About',function(){
+   return view('Week2.About'); 
+});
 
-Route::get('halo', function () {
-    return view('halo');
+Route::get('Hallo', function(){
+   return view('Hello'); 
+});
+
+Route::get('Gallery', function(){
+   return view('Week2.Gallery'); 
 });
